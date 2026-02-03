@@ -1,3 +1,9 @@
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
 	/* background: #111; */
     /* background-image: linear-gradient(to right bottom, #ff009e, #ff819f, #fea0ff,
@@ -8,7 +14,7 @@ body {
     #23020a); */
     background: #111;
 	height: 100vh;
-    overflow: hidden;
+    overflow-y: auto;
 }
 
 .wrapper span {
@@ -102,13 +108,17 @@ body {
 	}
 }
 
-h1{  
+h1{
     margin: 5rem 0 0;
-    padding-bottom: 0;
+    padding: 0 1rem;
     display: flex;
     justify-content: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: whitesmoke;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
+    flex-wrap: wrap;
 }
 
 .red{
@@ -138,6 +148,8 @@ img{
     margin-top: 29rem;
     padding-top: 2rem;
     gap: 12rem;
+    flex-wrap: wrap;
+    max-width: 100%;
 }
 
 .btn{
@@ -179,6 +191,78 @@ body.yess {
 
 body.noo {
     background-image: linear-gradient(0.25turn, #1d1919, #453b3b, #7d6b6b, #635a5a, #000000);
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.3rem;
+        margin: 2rem 0.5rem 0;
+        text-align: center;
+        padding: 0 0.5rem;
+    }
+
+    .red {
+        font-size: 1.8rem;
+    }
+
+    img {
+        height: 300px;
+        max-width: 90%;
+        object-fit: contain;
+    }
+
+    .buttons {
+        margin-top: 22rem;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        padding: 0.5rem;
+        width: 100%;
+    }
+
+    .btn {
+        font-size: 1.1rem;
+        padding: 0.75rem 1.25rem;
+        min-width: 100px;
+    }
+
+    #yes:hover:before {
+        content:"I know 💖";
+        font-size: 1.1rem;
+    }
+
+    #no:hover:before {
+        content:"Please 🥺";
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1rem;
+        margin: 1.5rem 0.25rem 0;
+        padding: 0 0.25rem;
+    }
+
+    .red {
+        font-size: 1.3rem;
+    }
+
+    img {
+        height: 250px;
+    }
+
+    .buttons {
+        margin-top: 20rem;
+        gap: 1rem;
+        padding: 0.25rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 0.6rem 1rem;
+        min-width: 90px;
+    }
 }
 
 a{

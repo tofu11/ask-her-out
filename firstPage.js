@@ -53,3 +53,32 @@ function resetBG(){
 function myFunction() {
     window.location.href = "Pages/Page 1/secondPage.html";
 }
+
+// Touch support for mobile devices
+const button = document.getElementById('hover');
+let touchActive = false;
+
+button.addEventListener('touchstart', function(e) {
+    e.preventDefault();
+    touchActive = true;
+    button.classList.add('touched');
+    ChangeImage('hi');
+    bg();
+});
+
+button.addEventListener('touchend', function(e) {
+    e.preventDefault();
+    if (touchActive) {
+        // Navigate after a short delay to show the effect
+        setTimeout(() => {
+            myFunction();
+        }, 300);
+    }
+});
+
+button.addEventListener('touchcancel', function(e) {
+    touchActive = false;
+    button.classList.remove('touched');
+    ResetImage();
+    resetBG();
+});

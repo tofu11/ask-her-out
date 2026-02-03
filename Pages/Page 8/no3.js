@@ -57,6 +57,13 @@ window.addEventListener('DOMContentLoaded', () =>{
         button.style.left = Math.floor(Math.random() * (maxWidth + 1)) + 'px';
         button.style.bottom = Math.floor(Math.random() * (maxHeight + 1)) + 'px';
     });
+
+    // Touch support for mobile - make button move on touch
+    button.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        button.style.left = Math.floor(Math.random() * (maxWidth + 1)) + 'px';
+        button.style.bottom = Math.floor(Math.random() * (maxHeight + 1)) + 'px';
+    });
 });
 
 //BG image change while hovering on a button
@@ -73,4 +80,18 @@ function resetBG(){
 //Linking to no page
 function noFunction() {
     window.location.href = "../Page 5/yes.html";
+}
+
+// Touch support for No button
+const noBtn = document.getElementById('no');
+if (noBtn) {
+    noBtn.addEventListener('touchstart', function() {
+        ChangeImage('depressed');
+        bg();
+    });
+
+    noBtn.addEventListener('touchend', function(e) {
+        e.preventDefault();
+        noFunction();
+    });
 }

@@ -37,3 +37,31 @@ function yesFunction() {
 function noFunction() {
     window.location.href = "../Page 6/no1.html";
 }
+
+// Touch support for mobile devices
+const yesBtn = document.getElementById('yes');
+const noBtn = document.getElementById('no');
+
+if (yesBtn) {
+    yesBtn.addEventListener('touchstart', function(e) {
+        ChangeImage('love');
+        bg1();
+    });
+
+    yesBtn.addEventListener('touchend', function(e) {
+        e.preventDefault();
+        yesFunction();
+    });
+}
+
+if (noBtn) {
+    noBtn.addEventListener('touchstart', function(e) {
+        ChangeImage('depressed');
+        bg2();
+    });
+
+    noBtn.addEventListener('touchend', function(e) {
+        e.preventDefault();
+        noFunction();
+    });
+}

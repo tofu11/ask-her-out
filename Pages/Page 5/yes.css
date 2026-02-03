@@ -1,7 +1,13 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;   
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .container
@@ -31,6 +37,9 @@ h1{
     font-family: "Love Ya Like A Sister", cursive;
     font-weight: 400;
     font-style: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding: 0 1rem;
 }
 
 
@@ -65,6 +74,46 @@ h1{
     background: #e80202 ;
     border-radius: 50%;
     box-shadow: -20px 0 40px rgba(0, 0, 0, 0.1) ;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    img {
+        padding-right: 0;
+        max-width: 80%;
+        height: auto;
+        margin-bottom: 2rem;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        padding: 0 1rem;
+    }
+
+    .heart {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    img {
+        max-width: 90%;
+    }
+
+    .heart {
+        width: 25px;
+        height: 25px;
+    }
 }
 
 a{

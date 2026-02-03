@@ -1,86 +1,322 @@
-body {
-	height: 100vh;
-    overflow: hidden;
+.buttons {
+    position: relative;
+    z-index: 10;
+    margin-top: 2rem;
 }
 
-h1{  
-    margin: 5rem 0 0;
-    padding-bottom: 0;
+.romantic1,
+.romantic2,
+.romantic3,
+.romantic4,
+.romantic5,
+.romantic6,
+.romantic7 {
+    z-index: 5;
+    position: absolute;
+    background-color: rgba(255, 182, 193, 0.85);
+    border: 1px solid #ff69b4;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    pointer-events: auto;
+}
+
+.romantic1:hover,
+.romantic2:hover,
+.romantic3:hover,
+.romantic4:hover,
+.romantic5:hover,
+.romantic6:hover,
+.romantic7:hover {
+    background-color: rgba(255, 105, 180, 1);
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow: visible;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%);
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Verdana', 'Geneva', 'Tahoma', sans-serif;
+    overflow-y: auto;
+    position: relative;
+}
+
+h1 {
+    margin: 0 0 1.5rem;
+    padding: 0;
     display: flex;
     justify-content: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #111;
+    color: #d81b60;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
+    padding: 0 1rem;
+    font-size: 2.2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    line-height: 1.3;
+    position: relative;
+    z-index: 10;
 }
 
-img{
-    margin-top:0;
-    height: 400px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+img {
+    height: 220px;
+    max-width: 85%;
+    margin: 0.5rem 0 2rem;
+    position: static;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    object-fit: contain;
+    position: relative;
+    z-index: 10;
 }
 
 .buttons {
-    font-size: 35px;
     display: flex;
     justify-content: center;
-    margin-top: 29rem;
-    padding-top: 2rem;
-    gap: 12rem;
+    gap: 2rem;
+    margin-top: 1rem;
+    position: relative;
+    z-index: 20;
+    background-color: transparent;
 }
 
-.romantic1{
-    margin: 0;
-    position: absolute;
-    top: 5%;
-    left: 85%;
-    transform: translate(-50%, -50%);
+.buttons button {
+    padding: 1rem 2.5rem;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    min-width: 140px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 25;
 }
-.romantic2{
-    margin: 0;
-    position: absolute;
-    top: 15%;
-    left: 15%;
-    transform: translate(-50%, -50%);
+
+.buttons button:first-child {
+    background-color: #4CAF50;
+    color: white;
 }
-.romantic3{
-    margin: 0;
-    position: absolute;
-    top: 35%;
-    left: 71%;
-    transform: translate(-50%, -50%);
+
+.buttons button:last-child {
+    background-color: #f44336;
+    color: white;
 }
-.romantic4{
-    margin: 0;
-    position: absolute;
-    top: 45%;
-    left: 25%;
-    transform: translate(-50%, -50%);
+
+.buttons button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
 }
-.romantic5{
-    margin: 0;
-    position: absolute;
-    top: 79%;
-    left: 79%;
-    transform: translate(-50%, -50%);
+
+/* ADJUSTED POSITIONS: Top buttons moved down, bottom buttons moved up */
+.romantic1 {
+    top: 15%;  /* Moved down from 5% */
+    left: 3%;
+    transform: rotate(-5deg);
 }
-.romantic6{
-    margin: 0;
-    position: absolute;
-    top: 75%;
-    left: 10%;
-    transform: translate(-50%, -50%);
+
+.romantic2 {
+    top: 18%;  /* Moved down from 8% */
+    right: 5%;
+    left: auto;
+    transform: rotate(3deg);
 }
-.romantic7{
-    margin: 0;
-    position: absolute;
-    top: 95%;
+
+.romantic3 {
+    top: 35%;  /* Moved down from 20% (closer to center) */
+    left: 1%;
+    transform: rotate(-8deg);
+}
+
+.romantic4 {
+    top: 40%;  /* Moved down from 25% (closer to center) */
+    right: 2%;
+    left: auto;
+    transform: rotate(6deg);
+}
+
+.romantic5 {
+    bottom: 40%;  /* Moved up from bottom: 25% (closer to center) */
+    left: 4%;
+    top: auto;
+    transform: rotate(-4deg);
+}
+
+.romantic6 {
+    bottom: 35%;  /* Moved up from bottom: 20% (closer to center) */
+    right: 3%;
+    left: auto;
+    top: auto;
+    transform: rotate(7deg);
+}
+
+.romantic7 {
+    bottom: 18%;  /* Moved up from bottom: 8% */
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%) rotate(-2deg);
+    top: auto;
 }
 
-a{
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    .content {
+        padding: 3rem 0.5rem;
+        max-width: 100%;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+        margin: 0 0.5rem 1.5rem;
+        padding: 0;
+    }
+
+    img {
+        height: 180px;
+        max-width: 90%;
+        margin: 0.5rem 0 1.5rem;
+    }
+
+    .buttons {
+        margin-top: 1.5rem;
+        gap: 1.5rem;
+        flex-wrap: nowrap;
+        padding: 0;
+        width: 90%;
+    }
+
+    .buttons button {
+        font-size: 1.3rem;
+        padding: 0.9rem 2rem;
+        min-width: 120px;
+    }
+
+    .romantic1, .romantic2, .romantic3, .romantic4,
+    .romantic5, .romantic6, .romantic7 {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+        white-space: normal;
+        max-width: 110px;
+        line-height: 1.2;
+    }
+
+    /* ADJUSTED MOBILE POSITIONS: More centered */
+    .romantic1 { top: 12%; left: 2%; transform: rotate(-3deg); } /* Moved down */
+    .romantic2 { top: 14%; right: 2%; transform: rotate(4deg); } /* Moved down */
+    .romantic3 { top: 28%; left: 1%; transform: rotate(-6deg); } /* Moved down */
+    .romantic4 { top: 32%; right: 1%; transform: rotate(5deg); } /* Moved down */
+    .romantic5 { bottom: 32%; left: 2%; transform: rotate(-2deg); } /* Moved up */
+    .romantic6 { bottom: 28%; right: 2%; transform: rotate(6deg); } /* Moved up */
+    .romantic7 { bottom: 14%; left: 50%; transform: translateX(-50%) rotate(-1deg); } /* Moved up */
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding: 2.5rem 0.3rem;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+        margin: 0 0.3rem 1.2rem;
+    }
+
+    img {
+        height: 150px;
+        margin: 0.5rem 0 1.2rem;
+    }
+
+    .buttons {
+        margin-top: 1.2rem;
+        gap: 1rem;
+        width: 95%;
+    }
+
+    .buttons button {
+        font-size: 1.1rem;
+        padding: 0.8rem 1.5rem;
+        min-width: 100px;
+    }
+
+    .romantic1, .romantic2, .romantic3, .romantic4,
+    .romantic5, .romantic6, .romantic7 {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.6rem;
+        max-width: 90px;
+    }
+    
+    /* ADJUSTED SMALL MOBILE POSITIONS */
+    .romantic1 { top: 10%; left: 1%; }
+    .romantic2 { top: 12%; right: 1%; }
+    .romantic3 { top: 26%; left: 1%; }
+    .romantic4 { top: 30%; right: 1%; }
+    .romantic5 { bottom: 30%; left: 1%; }
+    .romantic6 { bottom: 26%; right: 1%; }
+    .romantic7 { bottom: 12%; }
+}
+
+/* Extra small screens */
+@media (max-width: 360px) {
+    h1 {
+        font-size: 1.3rem;
+    }
+    
+    img {
+        height: 130px;
+    }
+    
+    .buttons {
+        gap: 0.8rem;
+    }
+    
+    .buttons button {
+        font-size: 1rem;
+        padding: 0.7rem 1.2rem;
+    }
+    
+    .romantic1, .romantic2, .romantic3, .romantic4,
+    .romantic5, .romantic6, .romantic7 {
+        font-size: 0.65rem;
+        padding: 0.25rem 0.5rem;
+        max-width: 80px;
+    }
+    
+    /* Further adjustments for very small screens */
+    .romantic1 { top: 8%; }
+    .romantic2 { top: 10%; }
+    .romantic3 { top: 24%; }
+    .romantic4 { top: 28%; }
+    .romantic5 { bottom: 28%; }
+    .romantic6 { bottom: 24%; }
+    .romantic7 { bottom: 10%; }
+}
+
+a {
     text-decoration: none;
     color: black;
 }
