@@ -16,11 +16,11 @@ function hearts(){
 
 setInterval(hearts, 100);
 
-//Scrolling to bottom
+//Scrolling to bottom - now redirects to Page 3
 const scrollingElement = (document.scrollingElement || document.body);
 
 const scrollToBottom = () => {
-    scrollingElement.scrollTop = scrollingElement.scrollHeight;
+    window.location.href = "../Page 3/forthPage.html";
 }
  
 
