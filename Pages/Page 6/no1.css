@@ -93,15 +93,3 @@ h1 {
   z-index: 1;
 }
 
-.watermark {
-  opacity: 0.5;
-  color: rgb(243, 214, 214);
-  position: fixed;
-  top: 95%;
-  left: 47%;
-}
-
-.watermark a {
-  text-decoration: none;
-  color: rgb(243, 214, 214);
-}

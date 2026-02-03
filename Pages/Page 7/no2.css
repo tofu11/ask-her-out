@@ -37,15 +37,3 @@ section .btn{
 	background: radial-gradient(circle at var(--x) var(--y) , transparent 10%, rgba(0,0,0,0.95) 20%);
 }
 
-.watermark {
-    opacity: 0.5;
-    color: rgb(243, 214, 214);
-    position: fixed;
-    top: 95%;
-    left: 47%;
-}
-
-.watermark a{
-    text-decoration: none;
-    color: rgb(243, 214, 214);
-}

@@ -51,14 +51,6 @@ body.hovered {
     content:"Hiiiii Cutieee \1F49E ";
 }
 
-.watermark {
-    opacity: 0.5;
-    color: rgb(238, 203, 203);
-    position: fixed;
-    top: 95%;
-    left: 47%;
-}
-
 a{
     text-decoration: none;
     color: rgb(238, 203, 203);
